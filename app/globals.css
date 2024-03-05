@@ -1,22 +1,20 @@
+@font-face {
+  font-family: playfair;
+  src: url("./fonts/PlayfairDisplay.ttf");
+}
+
+@font-face {
+  font-family: jakarta;
+  src: url("./fonts/PlusJakartaSans.ttf");
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 15, 15, 20;
-  --background-rgb: 214, 219, 220;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 214, 219, 220;
-    --background-rgb: 15, 15, 20;
-  }
-}
-
 body {
-  color: rgb(var(--foreground-rgb));
-  background-color: rgb(var(--background-rgb));
+  /* @apply max-w-screen-xl mx-auto text-zinc-800 dark:text-zinc-200 bg-creamson dark:bg-zinc-900; */
+  @apply font-jakarta max-w-screen-xl mx-auto text-zinc-900 bg-creamson scroll-smooth;
 }
 
 @layer utilities {

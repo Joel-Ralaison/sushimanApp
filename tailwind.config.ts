@@ -8,6 +8,20 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      backgroundColor: {
+        primary: "#b1454a",
+        secondary: "#121212",
+        creamson: "#fff0de",
+      },
+      colors: {
+        primary: "#b1454a",
+        secondary: "#121212",
+        creamson: "#fff0de",
+      },
+      fontFamily: {
+        jakarta: "jakarta",
+        playfair: "playfair",
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
