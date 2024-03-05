@@ -5,7 +5,7 @@ import { FaPlay } from "react-icons/fa";
 
 export default function Hero() {
   return (
-    <section className="flex h-[calc(100vh-56px)] overflow-hidden">
+    <section className="flex min-h-[calc(100vh-56px)] overflow-hidden">
       <Illustration />
       <Content />
     </section>
@@ -14,7 +14,7 @@ export default function Hero() {
 
 function Illustration() {
   return (
-    <article className="flex-1 relative flex flex-col z-[5]">
+    <article className="flex-1 max-h-[calc(100vh-56px)] relative flex flex-col z-[5]">
       <Image
         src={sushiHero}
         alt="sushi"
@@ -36,7 +36,7 @@ function Content() {
   return (
     <article className="w-[55%] flex flex-col justify-between">
       <article className="p-16 flex-1 flex flex-col justify-center">
-        <h2 className="text-7xl font-semibold font-playfair text-secondary">
+        <h2 className="text-7xl font-semibold font-playfair text-zinc-700">
           Feel the taste of Japanese food
         </h2>
 
@@ -73,7 +73,7 @@ function Content() {
           <p className="font-jakarta text-zinc-500">Happy customers</p>
         </section>
 
-        <section className="flex-1 flex items-center gap-3 ml-4">
+        <section className="flex-1 flex items-center gap-3 ml-4 text-sm">
           <Image
             src={User}
             alt="user"
