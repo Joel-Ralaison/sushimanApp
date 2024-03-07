@@ -3,29 +3,32 @@ export default function Subscribe() {
     <section
       id="services"
       style={{ backgroundImage: "url('assets/subscribe_bg.png')" }}
-      className="py-16 flex flex-col items-center gap-8 bg-primary bg-contain bg-no-repeat bg-center">
-      <h2 className="font-playfair text-5xl font-semibold leading-tight text-white text-center">
+      className="flex flex-col items-center gap-8 bg-primary bg-contain bg-center bg-no-repeat py-16"
+    >
+      <h2 className="text-center font-playfair text-5xl font-semibold leading-tight text-white">
         Get <span>Offers</span> straight
         <br />
         to your inbox
       </h2>
 
-      <p className="text-white/90 font-extralight tracking-widest">
+      <p className="font-extralight tracking-widest text-white/90">
         Sign-up for the SushiMan Newsletter
       </p>
 
       <form
         action="#"
-        className="flex gap-4 pl-5 pr-2 py-1 rounded-lg bg-white/10 border border-transparent focus-within:border-white/30">
+        className="flex gap-4 rounded-lg border border-transparent bg-white/10 py-1 pl-5 pr-2 focus-within:border-white/30"
+      >
         <input
           type="email"
           aria-label="email"
           placeholder="Enter your email"
-          className="pt-1 min-w-[400px] bg-transparent border-b border-black/25 outline-none text-lg text-white placeholder:text-zinc-100 placeholder:font-extralight"
+          className="min-w-[400px] border-b border-black/25 bg-transparent pt-1 text-lg text-white outline-none placeholder:font-extralight placeholder:text-zinc-100"
         />
         <button
           type="submit"
-          className="bg-secondary text-white p-3 rounded-md">
+          className="rounded-md bg-secondary p-3 text-white"
+        >
           Subscribe
         </button>
       </form>

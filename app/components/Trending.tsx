@@ -24,17 +24,15 @@ const drinkNames = [
 
 export default function Trending() {
   return (
-    <section
-      id="food"
-      className="min-h-screen flex flex-col relative">
+    <section id="food" className="relative flex min-h-screen flex-col">
       <TrendingSushi />
       <TrendingDrinks />
 
-      <div className="absolute top-[calc(50%-50px)] left-[calc(50%-50px)] w-[100px] h-[100px] flex justify-center items-center z-10 rounded-lg">
-        <p className="text-white z-10 font-medium font-playfair text-xl">
+      <div className="absolute left-[calc(50%-50px)] top-[calc(50%-50px)] z-10 flex h-[100px] w-[100px] items-center justify-center rounded-lg">
+        <p className="z-10 font-playfair text-xl font-medium text-white">
           DISCOVER
         </p>
-        <span className="bg-black w-full h-full absolute inset-0 rotate-45 z-[-1] ring-2 ring-black/25 ring-offset-8 rounded-lg"></span>
+        <span className="absolute inset-0 z-[-1] h-full w-full rotate-45 rounded-lg bg-black ring-2 ring-black/25 ring-offset-8"></span>
       </div>
     </section>
   );
@@ -43,28 +41,22 @@ export default function Trending() {
 function TrendingSushi() {
   return (
     <article className="flex h-[50vh]">
-      <section className="w-1/2 pl-16 pt-10 flex flex-col justify-center gap-5">
+      <section className="flex w-1/2 flex-col justify-center gap-5 pl-16 pt-10">
         <p className="text-lg text-zinc-600">What&apos;s Trending | トレンド</p>
 
-        <h3 className="text-4xl font-playfair text-zinc-700 font-medium">
+        <h3 className="font-playfair text-4xl font-medium text-zinc-700">
           Japanese Sushi
         </h3>
 
-        <p className="text-zinc-700 font-light">
+        <p className="font-light text-zinc-700">
           Feel the taste of the most delicious Sushi here.
         </p>
 
-        <ul className="max-w-[60%] pl-4 grid grid-cols-2 gap-y-2">
+        <ul className="grid max-w-[60%] grid-cols-2 gap-y-2 pl-4">
           {sushiNames.map((sushi) => (
-            <li
-              key={sushi}
-              className="w-fit flex items-center gap-2">
-              <span className="bg-primary px-[3px] py-1 rounded-full grid">
-                <Image
-                  src={check}
-                  alt="check"
-                  width={15}
-                />
+            <li key={sushi} className="flex w-fit items-center gap-2">
+              <span className="grid rounded-full bg-primary px-[3px] py-1">
+                <Image src={check} alt="check" width={15} />
               </span>
               <p className="font-light">{sushi}</p>
             </li>
@@ -72,10 +64,11 @@ function TrendingSushi() {
         </ul>
       </section>
 
-      <article className="w-1/2 bg-white pt-10 border-l border-b border-black/15">
+      <article className="w-1/2 border-b border-l border-black/15 bg-white pt-10">
         <div
           style={{ backgroundImage: "url('/assets/japanese_sushi.png')" }}
-          className="bg-right-top bg-contain flex justify-center items-center h-full">
+          className="flex h-full items-center justify-center bg-contain bg-right-top"
+        >
           <Image
             src={suhshi5}
             alt="sushi-5"
@@ -89,29 +82,23 @@ function TrendingSushi() {
 
 function TrendingDrinks() {
   return (
-    <article className="h-[50vh] flex flex-row-reverse">
-      <section className="w-1/2 pl-16 pt-10 flex flex-col justify-center gap-5">
+    <article className="flex h-[50vh] flex-row-reverse">
+      <section className="flex w-1/2 flex-col justify-center gap-5 pl-16 pt-10">
         <p className="text-lg text-zinc-600">What&apos;s Trending | トレンド</p>
 
-        <h3 className="text-4xl font-playfair text-zinc-700 font-medium">
+        <h3 className="font-playfair text-4xl font-medium text-zinc-700">
           Japanese Drinks
         </h3>
 
-        <p className="text-zinc-700 font-light">
+        <p className="font-light text-zinc-700">
           Feel the taste of most delicious Japanese drinks here.
         </p>
 
-        <ul className="max-w-[60%] pl-4 grid grid-cols-2 gap-y-2">
+        <ul className="grid max-w-[60%] grid-cols-2 gap-y-2 pl-4">
           {drinkNames.map((drink) => (
-            <li
-              key={drink}
-              className="w-fit flex items-center gap-2">
-              <span className="bg-primary px-[3px] py-1 rounded-full grid">
-                <Image
-                  src={check}
-                  alt="check"
-                  width={15}
-                />
+            <li key={drink} className="flex w-fit items-center gap-2">
+              <span className="grid rounded-full bg-primary px-[3px] py-1">
+                <Image src={check} alt="check" width={15} />
               </span>
               <p className="font-light">{drink}</p>
             </li>
@@ -119,10 +106,11 @@ function TrendingDrinks() {
         </ul>
       </section>
 
-      <article className="w-1/2 bg-white pt-10 border-r border-t border-black/15">
+      <article className="w-1/2 border-r border-t border-black/15 bg-white pt-10">
         <div
           style={{ backgroundImage: "url('/assets/japanese_drinks.png')" }}
-          className="bg-right-top bg-contain flex justify-center items-center h-full">
+          className="flex h-full items-center justify-center bg-contain bg-right-top"
+        >
           <Image
             src={suhshi4}
             alt="sushi-5"

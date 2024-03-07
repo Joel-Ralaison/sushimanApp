@@ -5,7 +5,7 @@ import { FaPlay } from "react-icons/fa";
 
 export default function Hero() {
   return (
-    <section className="flex min-h-[calc(100vh-56px)] overflow-hidden">
+    <section className="mt-[60px] flex min-h-[calc(100svh-60px)] flex-wrap overflow-hidden">
       <Illustration />
       <Content />
     </section>
@@ -14,46 +14,48 @@ export default function Hero() {
 
 function Illustration() {
   return (
-    <article className="flex-1 max-h-[calc(100vh-56px)] relative flex flex-col z-[5]">
+    <article className="relative z-[5] flex h-[calc(100svh-60px)] w-full flex-col bg-emerald-400 md:w-[44.5%]">
       <Image
         src={sushiHero}
         alt="sushi"
-        style={{ objectFit: "contain", width: "120%", height: "100%" }}
+        className="w-[120%)] h-[90%] object-contain"
       />
 
-      <h2 className="flex flex-col absolute bottom-4 text-white/90 font-bold text-7xl pl-2 font-playfair">
+      <h2 className="absolute bottom-5 flex flex-col pl-2 font-playfair text-7xl font-bold text-white/90">
         <span>日</span>
         <span>本</span>
         <span>食</span>
       </h2>
 
-      <div className="absolute inset-0 w-full bg-primary z-[-1]"></div>
+      <div className="absolute inset-0 z-[-1] h-[calc(100svh-60px)] w-full bg-primary"></div>
     </article>
   );
 }
 
 function Content() {
   return (
-    <article className="w-[55%] flex flex-col justify-between">
-      <article className="p-16 flex-1 flex flex-col justify-center">
-        <h2 className="text-7xl font-semibold font-playfair text-zinc-700">
+    <article className="relative flex w-full flex-col justify-between md:w-[55.5%]">
+      <article className="flex flex-col gap-8 pl-10 pt-10">
+        <h2 className="font-playfair text-6xl font-semibold text-zinc-700 md:text-6xl md:leading-[3.5rem] tablet:text-6xl tablet:leading-[1.2]">
           Feel the taste of Japanese food
         </h2>
 
-        <p className="text-secondary mt-8 ml-8 text-[18px] font-normal">
+        <p className="mb-4 ml-8 text-[18px] font-normal text-secondary">
           Tasty Japanese food, anywhere anytime
         </p>
 
-        <div className="ml-8 mt-8 flex flex-wrap gap-9">
+        <div className="mb-4 flex flex-col justify-center gap-3 md:flex-row">
           <button
             type="button"
-            className="p-5 max-h-[67px] rounded-2xl min-w-[212px] outline-none border-none bg-secondary text-white font-medium text-[18px]">
+            className="max-h-[67px] w-[80%] min-w-[150px] rounded-2xl border-none bg-secondary p-5 text-[18px] font-medium text-white outline-none md:w-[45%]"
+          >
             Order now
           </button>
 
           <button
             type="button"
-            className="h-[67px] overflow-hidden flex items-center justify-center rounded-2xl min-w-[212px] outline-none border border-secondary bg-transparent text-[16px] text-zinc-800 gap-4">
+            className="flex h-[67px] w-[80%] min-w-[150px] items-center justify-center gap-4 rounded-2xl border border-secondary bg-transparent text-[16px] text-zinc-800 outline-none md:w-[45%]"
+          >
             <span>
               <FaPlay className="h-[67px]" />
             </span>
@@ -63,9 +65,9 @@ function Content() {
         </div>
       </article>
 
-      <article className="py-8 px-16 bg-white flex flex-wrap gap-5 ">
-        <section className="flex-1 gap-3 border-r border-zinc-200">
-          <h4 className="text-6xl font-playfair">
+      <article className="flex flex-col items-center justify-center gap-8 bg-white px-4 py-2 md:flex-row md:gap-5 ">
+        <section className="w-[30%] gap-3 text-center md:border-r md:border-zinc-200">
+          <h4 className="font-playfair text-3xl tablet:text-5xl">
             <span>24</span>
             <span>k+</span>
           </h4>
@@ -73,7 +75,7 @@ function Content() {
           <p className="font-jakarta text-zinc-500">Happy customers</p>
         </section>
 
-        <section className="flex-1 flex items-center gap-3 ml-4 text-sm">
+        <section className="flex w-[68%] items-center gap-2 text-sm">
           <Image
             src={User}
             alt="user"
@@ -81,8 +83,8 @@ function Content() {
           />
 
           <p>
-            &quot; This is the best Japanese food delivery service that ever
-            existed.&quot;
+            &apos; This is the best Japanese food delivery service that ever
+            existed.&apos;
           </p>
         </section>
       </article>

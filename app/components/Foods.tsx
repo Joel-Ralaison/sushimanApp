@@ -21,8 +21,9 @@ export default function Foods() {
     <section
       style={{ backgroundImage: "url('/assets/popular_bg.png')" }}
       id="menu"
-      className="p-5 min-h-screen flex flex-col items-center bg-primary bg-center bg-no-repeat bg-contain overflow-hidden">
-      <h2 className="text-6xl font-playfair font-semibold leading-[78px] text-white text-center">
+      className="flex min-h-screen flex-col items-center overflow-hidden bg-primary bg-contain bg-center bg-no-repeat p-5"
+    >
+      <h2 className="text-center font-playfair text-6xl font-semibold leading-[78px] text-white">
         Popular Food | 人気
       </h2>
       <Filter />
@@ -30,14 +31,11 @@ export default function Foods() {
 
       <button
         type="button"
-        className="py-4 px-10 mt-10 flex justify-center items-center gap-4 bg-secondary text-white rounded-lg font-medium text-lg leading-[23px]">
+        className="mt-10 flex items-center justify-center gap-4 rounded-lg bg-secondary px-10 py-4 text-lg font-medium leading-[23px] text-white"
+      >
         <span>Explore Foods</span>
         <span>
-          <Image
-            src={arrowRight}
-            alt="explore foods"
-            width={20}
-          />
+          <Image src={arrowRight} alt="explore foods" width={20} />
         </span>
       </button>
     </section>
@@ -46,10 +44,11 @@ export default function Foods() {
 
 function Filter() {
   return (
-    <section className="mt-12 max-w-[100%] overflow-x-auto flex justify-center gap-6">
+    <section className="mt-12 flex max-w-[100%] justify-center gap-6 overflow-x-auto">
       <button
         type="button"
-        className="py-3 px-7 bg-white/90 rounded-lg border border-white/20 font-light leading-6 text-secondary">
+        className="rounded-lg border border-white/20 bg-white/90 px-7 py-3 font-light leading-6 text-secondary"
+      >
         All
       </button>
 
@@ -57,13 +56,10 @@ function Filter() {
         <button
           key={index + 1}
           type="button"
-          className="py-3 px-7 flex items-center gap-3 bg-white/5 rounded-lg border border-white/20 font-light leading-6 text-white hover:bg-white/90 hover:text-secondary transition-colors">
+          className="flex items-center gap-3 rounded-lg border border-white/20 bg-white/5 px-7 py-3 font-light leading-6 text-white transition-colors hover:bg-white/90 hover:text-secondary"
+        >
           <span>
-            <Image
-              src={filter.image}
-              alt={filter.label}
-              width={36}
-            />
+            <Image src={filter.image} alt={filter.label} width={36} />
           </span>
 
           <span>{filter.label}</span>
@@ -72,7 +68,8 @@ function Filter() {
 
       <button
         type="button"
-        className="py-3 px-7 bg-white/5 rounded-lg border border-white/20 font-light leading-6 text-white">
+        className="rounded-lg border border-white/20 bg-white/5 px-7 py-3 font-light leading-6 text-white"
+      >
         Others
       </button>
     </section>
@@ -87,30 +84,23 @@ function FoodCatalog() {
   ];
 
   return (
-    <section className="mt-16 flex justify-center items-end flex-wrap gap-12">
+    <section className="mt-16 flex flex-wrap items-end justify-center gap-12">
       {foodCard.map((food, index) => (
         <article
           key={index}
-          className="w-1/4 py-3 h-[200px] min-w-[200px] bg-white/10 border border-white/20 flex flex-col items-center justify-end gap-2 rounded-lg hover:scale-105 hover:bg-white/70 transition-all group text-white hover:text-secondary">
+          className="group flex h-[200px] w-1/4 min-w-[200px] flex-col items-center justify-end gap-2 rounded-lg border border-white/20 bg-white/10 py-3 text-white transition-all  hover:scale-105 hover:bg-white/70 hover:text-secondary"
+        >
           <span className="mb-3">
-            <Image
-              src={food.image}
-              alt={food.name}
-              width={115}
-              height={85}
-            />
+            <Image src={food.image} alt={food.name} width={115} height={85} />
           </span>
 
-          <h4 className="font-medium leading-[32px] font-playfair text-lg group-hover:font-bold">
+          <h4 className="font-playfair text-lg font-medium leading-[32px] group-hover:font-bold">
             {food.name}
           </h4>
 
           <div className="flex gap-8">
             <div className="flex gap-1">
-              <Image
-                src={Star}
-                alt="star rating"
-              />
+              <Image src={Star} alt="star rating" />
               <p>{food.rating}</p>
             </div>
 

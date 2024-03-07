@@ -1,17 +1,14 @@
-import Link from "next/link";
 import facebook from "/public/assets/facebook.svg";
 import twitter from "/public/assets/twitter.svg";
 import instagram from "/public/assets/instagram.svg";
 import Image from "next/image";
+import Menu from "./ui/Menu";
+import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="px-5 py-3 bg-white flex justify-between items-center">
-      <h2 className="text-3xl font-semibold font-playfair">
-        <span className="text-primary">Sushi</span>
-        <span className="text-secondary">Man</span>
-      </h2>
-
+    <footer className="flex items-center justify-between bg-white px-5 py-3">
+      <FooterLogo />
       <Menu />
 
       <SocialMedia />
@@ -19,24 +16,14 @@ export default function Footer() {
   );
 }
 
-function Menu() {
-  const links = [
-    { label: "Menu", href: "#menu" },
-    { label: "Food", href: "#food" },
-    { label: "Services", href: "#services" },
-    { label: "About-us", href: "#about" },
-  ];
-
+function FooterLogo() {
   return (
-    <ul className="hidden md:flex justify-evenly w-[55%]">
-      {links.map((link) => (
-        <Link
-          key={link.href}
-          href={link.href}>
-          {link.label}
-        </Link>
-      ))}
-    </ul>
+    <h2 className="font-playfair text-3xl font-semibold">
+      <Link href="/">
+        <span className="text-primary">Sushi</span>
+        <span className="text-secondary">Man</span>
+      </Link>
+    </h2>
   );
 }
 
@@ -47,14 +34,13 @@ function SocialMedia() {
     { href: "https://www.instagram.com", image: instagram },
   ];
   return (
-    <ul className="flex gap-2 items-center">
+    <ul className="flex items-center gap-2">
       {mediaLinks.map((media) => (
         <li
           key={media.href}
-          className="bg-black h-[35px] w-[35px] flex items-center justify-center rounded-full">
-          <a
-            href={media.href}
-            target="_blank">
+          className="flex h-[35px] w-[35px] items-center justify-center rounded-full bg-black"
+        >
+          <a href={media.href} target="_blank">
             <Image
               src={media.image}
               alt={media.href}

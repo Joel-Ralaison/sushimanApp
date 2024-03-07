@@ -1,47 +1,26 @@
 import Link from "next/link";
-import { BiMenuAltRight } from "react-icons/bi";
-import { FaSearch } from "react-icons/fa";
+import Menu from "./ui/Menu";
+import MobileMenu from "./ui/MobileMenu";
 
 export default function Header() {
   return (
-    <header className="top-0 max-w-screen-xl bg-primary md:bg-transparent">
+    <header className="fixed top-0 z-20 h-[60px] w-full bg-primary md:max-w-screen-xl md:bg-creamson">
       <nav className="flex items-center">
-        <Logo />
+        <HeaderLogo />
         <Menu />
-        <BiMenuAltRight className="md:hidden text-3xl text-white pr-2 w-16" />
+        <MobileMenu />
       </nav>
     </header>
   );
 }
 
-function Logo() {
+function HeaderLogo() {
   return (
-    <article className="flex-1 overflow-hidden relative px-5 pt-3 pb-4">
-      <h1 className="pl-5 font-playfair z-[2] text-white font-bold text-xl">
-        SushiMan
+    <article className="relative h-[60px] w-[44.5%] overflow-hidden px-5 pb-4 pt-3">
+      <h1 className="z-[2] pl-5 font-playfair text-xl font-bold text-white">
+        <Link href="/">SushiMan</Link>
       </h1>
-      <div className="w-full absolute inset-0 z-[-1] bg-primary"></div>
+      <div className="absolute inset-0 z-[-1] w-full bg-primary"></div>
     </article>
-  );
-}
-
-function Menu() {
-  const links = [
-    { label: "Menu", href: "#menu" },
-    { label: "Food", href: "#food" },
-    { label: "Services", href: "#services" },
-    { label: "About-us", href: "#about" },
-  ];
-
-  return (
-    <ul className="hidden md:flex justify-evenly w-[55%]">
-      {links.map((link) => (
-        <Link
-          key={link.href}
-          href={link.href}>
-          {link.label}
-        </Link>
-      ))}
-    </ul>
   );
 }

@@ -8,6 +8,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      screens: {
+        tablet: "1095px",
+      },
       backgroundColor: {
         primary: "#b1454a",
         secondary: "#121212",
