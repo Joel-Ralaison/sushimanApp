@@ -91,7 +91,7 @@ function FoodCatalog() {
       {foodCard.map((food, index) => (
         <article
           key={index}
-          className="w-1/4 py-3 h-[200px] min-w-[200px] bg-white/10 border border-white/20 flex flex-col items-center justify-end gap-2 rounded-lg hover:scale-105 hover:bg-white/70 transition-all">
+          className="w-1/4 py-3 h-[200px] min-w-[200px] bg-white/10 border border-white/20 flex flex-col items-center justify-end gap-2 rounded-lg hover:scale-105 hover:bg-white/70 transition-all group text-white hover:text-secondary">
           <span className="mb-3">
             <Image
               src={food.image}
@@ -101,7 +101,7 @@ function FoodCatalog() {
             />
           </span>
 
-          <h4 className="font-medium leading-[32px] font-playfair text-lg text-white">
+          <h4 className="font-medium leading-[32px] font-playfair text-lg group-hover:font-bold">
             {food.name}
           </h4>
 
@@ -109,7 +109,7 @@ function FoodCatalog() {
             <div className="flex gap-1">
               <Image
                 src={Star}
-                alt="star"
+                alt="star rating"
               />
               <p>{food.rating}</p>
             </div>

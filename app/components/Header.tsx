@@ -2,13 +2,6 @@ import Link from "next/link";
 import { BiMenuAltRight } from "react-icons/bi";
 import { FaSearch } from "react-icons/fa";
 
-const links = [
-  { label: "Menu", href: "#menu" },
-  { label: "Food", href: "#food" },
-  { label: "Services", href: "#services" },
-  { label: "About-us", href: "#about" },
-];
-
 export default function Header() {
   return (
     <header className="top-0 max-w-screen-xl bg-primary md:bg-transparent">
@@ -33,20 +26,22 @@ function Logo() {
 }
 
 function Menu() {
+  const links = [
+    { label: "Menu", href: "#menu" },
+    { label: "Food", href: "#food" },
+    { label: "Services", href: "#services" },
+    { label: "About-us", href: "#about" },
+  ];
+
   return (
     <ul className="hidden md:flex justify-evenly w-[55%]">
       {links.map((link) => (
         <Link
-          className=""
           key={link.href}
           href={link.href}>
           {link.label}
         </Link>
       ))}
-
-      <Link href="#">
-        <FaSearch className="text-xl relative top-1 text-zinc-500" />
-      </Link>
     </ul>
   );
 }
