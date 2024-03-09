@@ -2,15 +2,12 @@ import facebook from "/public/assets/facebook.svg";
 import twitter from "/public/assets/twitter.svg";
 import instagram from "/public/assets/instagram.svg";
 import Image from "next/image";
-import Menu from "./ui/Menu";
 import Link from "next/link";
 
 export default function Footer() {
   return (
     <footer className="flex items-center justify-between bg-white px-5 py-3">
       <FooterLogo />
-      <Menu />
-
       <SocialMedia />
     </footer>
   );

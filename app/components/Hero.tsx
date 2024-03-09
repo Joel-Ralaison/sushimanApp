@@ -5,7 +5,7 @@ import { FaPlay } from "react-icons/fa";
 
 export default function Hero() {
   return (
-    <section className="mt-[60px] flex min-h-[calc(100svh-60px)] flex-wrap overflow-hidden">
+    <section className="relative mt-[60px] flex min-h-[calc(100svh-60px)] flex-wrap">
       <Illustration />
       <Content />
     </section>
@@ -18,7 +18,7 @@ function Illustration() {
       <Image
         src={sushiHero}
         alt="sushi"
-        className="w-[120%)] h-[90%] object-contain"
+        className="w-[100%)] h-[90%] object-contain"
       />
 
       <h2 className="absolute bottom-5 flex flex-col pl-2 font-playfair text-7xl font-bold text-white/90">
@@ -34,27 +34,27 @@ function Illustration() {
 
 function Content() {
   return (
-    <article className="relative flex w-full flex-col justify-between md:w-[55.5%]">
-      <article className="flex flex-col gap-8 pl-10 pt-10">
-        <h2 className="font-playfair text-6xl font-semibold text-zinc-700 md:text-6xl md:leading-[3.5rem] tablet:text-6xl tablet:leading-[1.2]">
+    <article className="flex w-full flex-col items-center justify-start pt-10 text-center md:h-[calc(100svh-60px)] md:w-[55.5%] md:justify-between md:pt-[4%] md:text-start">
+      <article className="flex flex-col gap-4 md:pl-10">
+        <h2 className="font-playfair text-6xl font-semibold text-zinc-700 md:text-5xl md:leading-[3.5rem] tablet:text-6xl tablet:leading-[1.2]">
           Feel the taste of Japanese food
         </h2>
 
-        <p className="mb-4 ml-8 text-[18px] font-normal text-secondary">
+        <p className="ml-8 text-[18px] font-normal text-secondary md:mb-4">
           Tasty Japanese food, anywhere anytime
         </p>
 
-        <div className="mb-4 flex flex-col justify-center gap-3 md:flex-row">
+        <div className="mb-8 flex flex-col justify-center gap-3 px-8 md:flex-row">
           <button
             type="button"
-            className="max-h-[67px] w-[80%] min-w-[150px] rounded-2xl border-none bg-secondary p-5 text-[18px] font-medium text-white outline-none md:w-[45%]"
+            className="h-[67px] w-[calc(100%)] min-w-[150px] rounded-2xl border-none bg-secondary p-5 text-[18px] font-medium text-white outline-none md:w-[45%]"
           >
             Order now
           </button>
 
           <button
             type="button"
-            className="flex h-[67px] w-[80%] min-w-[150px] items-center justify-center gap-4 rounded-2xl border border-secondary bg-transparent text-[16px] text-zinc-800 outline-none md:w-[45%]"
+            className="flex h-[67px] w-[calc(100%)] min-w-[150px] items-center justify-center gap-4 rounded-2xl border border-secondary bg-transparent text-[16px] text-zinc-800 outline-none md:w-[45%]"
           >
             <span>
               <FaPlay className="h-[67px]" />
@@ -65,7 +65,7 @@ function Content() {
         </div>
       </article>
 
-      <article className="flex flex-col items-center justify-center gap-8 bg-white px-4 py-2 md:flex-row md:gap-5 ">
+      <article className="flex w-full flex-col items-center gap-8 bg-white px-4 py-2 md:w-[100%] md:flex-row md:justify-center md:gap-5 ">
         <section className="w-[30%] gap-3 text-center md:border-r md:border-zinc-200">
           <h4 className="font-playfair text-3xl tablet:text-5xl">
             <span>24</span>

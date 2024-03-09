@@ -21,9 +21,9 @@ export default function Foods() {
     <section
       style={{ backgroundImage: "url('/assets/popular_bg.png')" }}
       id="menu"
-      className="flex min-h-screen flex-col items-center overflow-hidden bg-primary bg-contain bg-center bg-no-repeat p-5"
+      className="flex flex-col items-center overflow-hidden bg-primary bg-contain bg-center bg-no-repeat py-16"
     >
-      <h2 className="text-center font-playfair text-6xl font-semibold leading-[78px] text-white">
+      <h2 className="text-center font-playfair text-4xl font-semibold leading-[78px] text-white md:text-6xl">
         Popular Food | 人気
       </h2>
       <Filter />
@@ -44,7 +44,7 @@ export default function Foods() {
 
 function Filter() {
   return (
-    <section className="mt-12 flex max-w-[100%] justify-center gap-6 overflow-x-auto">
+    <section className="mt-12 flex max-w-[100%] scroll-m-12 gap-6 overflow-x-auto px-2 pb-4">
       <button
         type="button"
         className="rounded-lg border border-white/20 bg-white/90 px-7 py-3 font-light leading-6 text-secondary"
@@ -78,17 +78,17 @@ function Filter() {
 
 function FoodCatalog() {
   const foodCard = [
-    { name: "Chezu Sushi", image: suhsi12, rating: 4.9, price: "$21.00" },
-    { name: "Originale Sushi", image: suhsi11, rating: 4.8, price: "$15.75" },
+    { name: "Chezu Sushi", image: suhsi12, rating: 4.8, price: "$21.00" },
+    { name: "Originale Sushi", image: suhsi11, rating: 4.9, price: "$15.75" },
     { name: "Ramen Legendo", image: suhsi10, rating: 4.7, price: "$13.00" },
   ];
 
   return (
-    <section className="mt-16 flex flex-wrap items-end justify-center gap-12">
+    <section className="mt-10 flex flex-col flex-wrap items-end justify-center space-x-4 space-y-4 md:mt-4 md:flex-row">
       {foodCard.map((food, index) => (
         <article
           key={index}
-          className="group flex h-[200px] w-1/4 min-w-[200px] flex-col items-center justify-end gap-2 rounded-lg border border-white/20 bg-white/10 py-3 text-white transition-all  hover:scale-105 hover:bg-white/70 hover:text-secondary"
+          className="group flex h-[200px] w-1/4 min-w-[70vw] flex-col items-center justify-end gap-2 rounded-lg border border-white/20 bg-white/10 py-3 text-white transition-all hover:scale-105 hover:bg-white/70 hover:text-secondary md:min-w-[200px]"
         >
           <span className="mb-3">
             <Image src={food.image} alt={food.name} width={115} height={85} />
