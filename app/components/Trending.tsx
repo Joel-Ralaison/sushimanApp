@@ -66,12 +66,17 @@ function TrendingSushi() {
         </ul>
       </section>
 
-      <article className="w-[100%] border-b border-l border-black/15 bg-white py-10 md:w-1/2">
+      <article className="group w-[100%] overflow-hidden border-b border-l border-black/15 bg-white py-10 md:w-1/2">
         <div
           style={{ backgroundImage: "url('/assets/japanese_sushi.png')" }}
           className="flex h-full items-center justify-center bg-contain bg-right-top"
         >
-          <Image src={suhshi5} alt="sushi-5" style={{ maxWidth: "40%" }} />
+          <Image
+            src={suhshi5}
+            alt="sushi-5"
+            style={{ maxWidth: "40%" }}
+            className="transition-transform duration-1000 group-hover:scale-110"
+          />
         </div>
       </article>
     </article>
@@ -109,9 +114,14 @@ function TrendingDrinks() {
       <article className="w-[100%] border-b border-l border-black/15 bg-white py-10 md:w-1/2">
         <div
           style={{ backgroundImage: "url('/assets/japanese_drinks.png')" }}
-          className="flex h-full items-center justify-center bg-contain bg-right-top"
+          className="group flex h-full items-center justify-center bg-contain bg-right-top"
         >
-          <Image src={suhshi4} alt="sushi-4" style={{ maxWidth: "40%" }} />
+          <Image
+            src={suhshi4}
+            alt="sushi-4"
+            style={{ maxWidth: "40%" }}
+            className="scale-90 transition-transform duration-1000 group-hover:scale-100"
+          />
         </div>
       </article>
     </article>

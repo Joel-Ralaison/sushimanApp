@@ -27,7 +27,7 @@ export default function Subscribe() {
         />
         <button
           type="submit"
-          className="rounded-md bg-secondary p-3 text-white"
+          className="rounded-lg bg-secondary p-3 text-white transition-colors duration-200 ease-in-out hover:bg-white hover:text-secondary hover:shadow-md hover:shadow-black/15"
         >
           Subscribe
         </button>

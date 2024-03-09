@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="flex items-center justify-between bg-white px-5 py-3">
+    <footer className="flex items-center justify-between bg-black px-5 py-3">
       <FooterLogo />
       <SocialMedia />
     </footer>
@@ -18,7 +18,7 @@ function FooterLogo() {
     <h2 className="font-playfair text-3xl font-semibold">
       <Link href="/">
         <span className="text-primary">Sushi</span>
-        <span className="text-secondary">Man</span>
+        <span className="text-white">Man</span>
       </Link>
     </h2>
   );
@@ -41,7 +41,7 @@ function SocialMedia() {
             <Image
               src={media.image}
               alt={media.href}
-              style={{ width: "85%", height: "85%" }}
+              style={{ width: "100%", height: "100%", padding: "5px" }}
             />
           </a>
         </li>

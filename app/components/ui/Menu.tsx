@@ -9,12 +9,9 @@ export default function Menu() {
   ];
 
   return (
-    <ul className="hidden md:flex md:justify-evenly md:w-[54.7%] bg-creamson z-20">
+    <ul className="z-20 hidden bg-creamson md:flex md:w-[54.7%] md:justify-evenly">
       {links.map((link) => (
-        <Link
-          key={link.href}
-          href={link.href}
-          className="px-3 py-2">
+        <Link key={link.href} href={link.href} className="px-3 py-2">
           {link.label}
         </Link>
       ))}

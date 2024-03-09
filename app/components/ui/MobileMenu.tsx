@@ -10,19 +10,23 @@ const links = [
 
 export default function MobileMenu() {
   return (
-    <details className="z-20 relative flex-1 flex justify-end">
-      <summary className="list-none py-2 px-1 cursor-pointer flex justify-end">
-        <BiMenuAltRight className="md:hidden text-3xl text-white w-16" />
+    <details className="relative z-20 flex flex-1 justify-end">
+      <summary className="flex cursor-pointer list-none justify-end px-1 py-2">
+        <BiMenuAltRight className="w-16 text-3xl text-white md:hidden" />
       </summary>
 
-      <ul className="fixed top-[60px] left-0 w-full h-[calc(100svh-60px)] bg-primary flex flex-col items-center gap-10 text-white font-light">
+      <ul className="fixed left-0 top-[60px] flex h-[calc(100svh-60px)] w-full flex-col items-center gap-10 bg-primary font-light text-white">
         {links.map((link) => (
-          <Link
-            key={link.href}
-            href={link.href}>
+          <Link key={link.href} href={link.href}>
             {link.label}
           </Link>
         ))}
+
+        <h2 className="absolute bottom-5 left-0 flex flex-col pl-2 font-playfair text-7xl font-bold text-white/90">
+          <span>日</span>
+          <span>本</span>
+          <span>食</span>
+        </h2>
       </ul>
     </details>
   );

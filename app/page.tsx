@@ -11,10 +11,10 @@ export default function HomePage() {
     <>
       <Header />
       <Hero />
-      <About />
       <Foods />
       <Trending />
       <Subscribe />
+      <About />
       <Footer />
     </>
   );

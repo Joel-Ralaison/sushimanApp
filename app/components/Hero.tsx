@@ -47,14 +47,14 @@ function Content() {
         <div className="mb-8 flex flex-col justify-center gap-3 px-8 md:flex-row">
           <button
             type="button"
-            className="h-[67px] w-[calc(100%)] min-w-[150px] rounded-2xl border-none bg-secondary p-5 text-[18px] font-medium text-white outline-none md:w-[45%]"
+            className="duration-50 h-[67px] w-[calc(100%)] min-w-[150px] rounded-2xl border-none bg-secondary p-5 text-[18px] font-medium text-white outline-none transition-all hover:scale-[1.01] hover:bg-primary hover:shadow-md hover:shadow-black/5 active:scale-[0.98] md:w-[45%]"
           >
             Order now
           </button>
 
           <button
             type="button"
-            className="flex h-[67px] w-[calc(100%)] min-w-[150px] items-center justify-center gap-4 rounded-2xl border border-secondary bg-transparent text-[16px] text-zinc-800 outline-none md:w-[45%]"
+            className="duration-50 flex h-[67px] w-[calc(100%)] min-w-[150px] items-center justify-center gap-2 rounded-2xl border border-secondary bg-transparent text-[16px] outline-none transition-all hover:scale-[1.01] hover:bg-white hover:text-black hover:shadow-md hover:shadow-black/5 active:scale-[0.98] md:w-[45%]"
           >
             <span>
               <FaPlay className="h-[67px]" />

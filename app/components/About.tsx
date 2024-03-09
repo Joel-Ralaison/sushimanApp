@@ -27,10 +27,10 @@ function SushiIllustrations() {
 
       <button
         type="button"
-        className="absolute right-0 top-1/2 flex min-h-16 items-center gap-4 rounded-l-3xl bg-secondary px-8 py-3 text-lg font-medium text-white"
+        className="group absolute right-0 top-1/2 flex min-h-16 items-center gap-2 rounded-l-3xl bg-secondary px-8 py-3 text-lg font-medium text-white transition-all hover:origin-right hover:bg-primary hover:shadow-md hover:shadow-black/15"
       >
         <span>Learn more</span>
-        <span>
+        <span className="relative bottom-0 left-0 transition-all group-hover:bottom-[3px] group-hover:left-[3px]">
           <Image src={learnMore} alt="learn more" width={20} />
         </span>
       </button>
@@ -48,7 +48,7 @@ function SushiIllustrations() {
 function AboutContent() {
   return (
     <article className="flex w-full flex-col justify-center gap-10 p-16 md:w-[56%]">
-      <p className="flex gap-2 text-lg font-medium  tracking-wide text-zinc-500">
+      <p className="flex gap-2 text-lg font-medium tracking-wide text-zinc-500 transition-colors">
         <span>About Us |</span>
         <span>私たちに関しては</span>
       </p>
