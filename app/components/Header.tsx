@@ -1,6 +1,7 @@
 import Link from "next/link";
-import Menu from "./ui/Menu";
-import MobileMenu from "./ui/MobileMenu";
+
+import Menu from "./ui/HeaderMenu";
+import MobileMenu from "./ui/HeaderMobileMenu";
 
 export default function Header() {
   return (
@@ -20,6 +21,7 @@ function HeaderLogo() {
       <h1 className="z-[2] pl-5 font-playfair text-xl font-bold text-white">
         <Link href="/">SushiMan</Link>
       </h1>
+
       <div className="absolute inset-0 z-[-1] w-full bg-primary"></div>
     </article>
   );

@@ -1,12 +1,8 @@
 import Link from "next/link";
-import { BiMenuAltRight } from "react-icons/bi";
+import AsianDecoration from "./Reusables/AsianDecoration";
 
-const links = [
-  { label: "Menu", href: "#menu" },
-  { label: "Food", href: "#food" },
-  { label: "Services", href: "#services" },
-  { label: "About-us", href: "#about" },
-];
+import { MENU_LINKS } from "@/app/constants/MENU_LINKS";
+import { BiMenuAltRight } from "react-icons/bi";
 
 export default function MobileMenu() {
   return (
@@ -16,18 +12,16 @@ export default function MobileMenu() {
       </summary>
 
       <ul className="fixed left-0 top-[60px] flex h-[calc(100svh-60px)] w-full flex-col items-center gap-10 bg-primary font-light text-white">
-        {links.map((link) => (
+        {MENU_LINKS.map((link) => (
           <Link key={link.href} href={link.href}>
             {link.label}
           </Link>
         ))}
 
-        <h2 className="absolute bottom-5 left-0 flex flex-col pl-2 font-playfair text-7xl font-bold text-white/90">
-          <span>日</span>
-          <span>本</span>
-          <span>食</span>
-        </h2>
+        <AsianDecoration />
       </ul>
     </details>
   );
 }
+
+// TODO: LINKS to button autoscroll to refs

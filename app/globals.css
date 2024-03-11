@@ -13,8 +13,7 @@
 @tailwind utilities;
 
 body {
-  /* @apply max-w-screen-xl mx-auto text-zinc-800 dark:text-zinc-200 bg-creamson dark:bg-zinc-900; */
-  @apply font-jakarta max-w-screen-xl mx-auto text-zinc-900 bg-creamson scroll-smooth;
+  @apply mx-auto max-w-screen-xl scroll-smooth bg-creamson font-jakarta text-zinc-900;
 }
 
 @layer utilities {

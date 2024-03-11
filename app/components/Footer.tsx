@@ -1,12 +1,10 @@
-import facebook from "/public/assets/facebook.svg";
-import twitter from "/public/assets/twitter.svg";
-import instagram from "/public/assets/instagram.svg";
 import Image from "next/image";
 import Link from "next/link";
+import { MEDIA_LINKS } from "../constants/SOCIAL_MEDIA_LISTS";
 
 export default function Footer() {
   return (
-    <footer className="flex items-center justify-between bg-black px-5 py-3">
+    <footer className="shad flex items-center justify-between bg-primary px-5 py-3">
       <FooterLogo />
       <SocialMedia />
     </footer>
@@ -17,27 +15,22 @@ function FooterLogo() {
   return (
     <h2 className="font-playfair text-3xl font-semibold">
       <Link href="/">
-        <span className="text-primary">Sushi</span>
-        <span className="text-white">Man</span>
+        <span className="text-white">Sushi</span>
+        <span className="text-black">Man</span>
       </Link>
     </h2>
   );
 }
 
 function SocialMedia() {
-  const mediaLinks = [
-    { href: "https://www.facebook.com", image: facebook },
-    { href: "https://www.twitter.com", image: twitter },
-    { href: "https://www.instagram.com", image: instagram },
-  ];
   return (
     <ul className="flex items-center gap-2">
-      {mediaLinks.map((media) => (
+      {MEDIA_LINKS.map((media) => (
         <li
           key={media.href}
-          className="flex h-[35px] w-[35px] items-center justify-center rounded-full bg-black"
+          className="flex h-[35px] w-[35px] items-center justify-center rounded-full bg-primary"
         >
-          <a href={media.href} target="_blank">
+          <a href={media.href} target="_blank" title={media.href}>
             <Image
               src={media.image}
               alt={media.href}

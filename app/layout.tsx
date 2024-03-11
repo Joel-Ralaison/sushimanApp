@@ -2,9 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Sushi | Japanese food",
-  description:
-    "A Next.js 14 based app, build to practice front-end core concepts",
+  title: "SushiMan | Pratice project",
+  description: "A Next.js 14 based app, build to practice front-end concepts",
 };
 
 type RootLayoutProp = {
