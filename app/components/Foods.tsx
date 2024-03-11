@@ -1,16 +1,15 @@
 import Image from "next/image";
 
-import arrowRight from "/public/assets/arrow-right.svg";
-
 import FoodsFilters from "./ui/FoodsFilters";
 import FoodsCatalog from "./ui/FoodsCatalog";
+import { arrowRight } from "../constants/IMAGES_LIST";
 
 export default function Foods() {
   return (
     <section
       style={{ backgroundImage: "url('/assets/popular_bg.png')" }}
       id="menu"
-      className="flex flex-col items-center overflow-hidden bg-primary bg-contain bg-center bg-no-repeat py-16"
+      className="mx-1 my-4 flex flex-col items-center overflow-hidden rounded-lg bg-primary bg-contain bg-center bg-no-repeat py-16 shadow-lg shadow-black/20 transition-transform hover:scale-[1.005]"
     >
       <h2 className="text-center font-playfair text-4xl font-semibold leading-[78px] text-white md:text-6xl">
         Popular Food | 人気

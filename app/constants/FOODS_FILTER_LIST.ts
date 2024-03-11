@@ -1,21 +1,22 @@
-import suhsi6 from "/public/assets/sushi-6.png";
-import suhsi7 from "/public/assets/sushi-7.png";
-import suhsi8 from "/public/assets/sushi-8.png";
-import suhsi9 from "/public/assets/sushi-9.png";
-
-import suhsi10 from "/public/assets/sushi-10.png";
-import suhsi11 from "/public/assets/sushi-11.png";
-import suhsi12 from "/public/assets/sushi-12.png";
+import {
+  sushi6,
+  sushi7,
+  sushi8,
+  sushi9,
+  sushi10,
+  sushi11,
+  sushi12,
+} from "./IMAGES_LIST";
 
 export const FILTERS_LIST = [
-  { label: "Sushi", image: suhsi9 },
-  { label: "Ramen", image: suhsi8 },
-  { label: "Udon", image: suhsi7 },
-  { label: "Danggo", image: suhsi6 },
+  { label: "Sushi", image: sushi9 },
+  { label: "Ramen", image: sushi8 },
+  { label: "Udon", image: sushi7 },
+  { label: "Danggo", image: sushi6 },
 ];
 
 export const FOOD_CARDS = [
-  { name: "Chezu Sushi", image: suhsi12, rating: 4.8, price: "$21.00" },
-  { name: "Originale Sushi", image: suhsi11, rating: 4.9, price: "$15.75" },
-  { name: "Ramen Legendo", image: suhsi10, rating: 4.7, price: "$13.00" },
+  { name: "Chezu Sushi", image: sushi12, rating: 4.8, price: "$21.00" },
+  { name: "Originale Sushi", image: sushi11, rating: 4.9, price: "$15.75" },
+  { name: "Ramen Legendo", image: sushi10, rating: 4.7, price: "$13.00" },
 ];

@@ -18,7 +18,11 @@ export default function FoodsFilters() {
           className="flex items-center gap-3 rounded-lg border border-white/20 bg-white/5 px-7 py-3 font-light leading-6 text-white transition-colors hover:bg-white/90 hover:text-secondary"
         >
           <span>
-            <Image src={filter.image} alt={filter.label} width={36} />
+            <Image
+              src={filter.image}
+              alt={filter.label}
+              style={{ width: "36px" }}
+            />
           </span>
 
           <span>{filter.label}</span>

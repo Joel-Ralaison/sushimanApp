@@ -5,7 +5,7 @@ import MobileMenu from "./ui/HeaderMobileMenu";
 
 export default function Header() {
   return (
-    <header className="fixed top-0 z-20 h-[60px] w-full bg-primary shadow-lg shadow-black/15 md:max-w-screen-xl md:bg-creamson">
+    <header className="primary fixed top-0 z-20 h-[60px] w-full overflow-hidden rounded-b-md bg-primary shadow-lg shadow-black/15 md:max-w-screen-xl md:bg-creamson">
       <nav className="flex items-center">
         <HeaderLogo />
         <Menu />

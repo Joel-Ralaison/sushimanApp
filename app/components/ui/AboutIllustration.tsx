@@ -1,7 +1,5 @@
 import Image from "next/image";
-import sushi2 from "/public/assets/sushi-2.png";
-import sushi3 from "/public/assets/sushi-3.png";
-import learnMore from "/public/assets/arrow-up-right.svg";
+import { learnMore, sushi2, sushi3 } from "@/app/constants/IMAGES_LIST";
 
 export default function AboutIllustration() {
   return (
@@ -10,7 +8,7 @@ export default function AboutIllustration() {
         style={{ backgroundImage: "url('/assets/about_bg1.png')" }}
         className="flex flex-1 items-center justify-center border-b border-creamson bg-contain bg-center bg-no-repeat py-8"
       >
-        <Image src={sushi3} alt="sushi image 2" width={300} height={225} />
+        <Image src={sushi3} alt="sushi image 2" width={300} />
       </div>
 
       <button
@@ -27,7 +25,7 @@ export default function AboutIllustration() {
         style={{ backgroundImage: "url('/assets/about_bg2.png')" }}
         className="flex flex-1 items-center justify-center bg-contain bg-center bg-no-repeat py-8"
       >
-        <Image src={sushi2} alt="sushi image 3" width={300} height={225} />
+        <Image src={sushi2} alt="sushi image 3" width={300} />
       </div>
     </article>
   );

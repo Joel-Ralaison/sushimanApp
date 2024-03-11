@@ -11,7 +11,7 @@ export default function MobileMenu() {
         <BiMenuAltRight className="w-16 text-3xl text-white md:hidden" />
       </summary>
 
-      <ul className="fixed left-0 top-[60px] flex h-[calc(100svh-60px)] w-full flex-col items-center gap-10 bg-primary font-light text-white">
+      <ul className="fixed left-0 top-[55px] flex h-[calc(100svh-55px)] w-full flex-col items-center gap-10 bg-primary font-light text-white">
         {MENU_LINKS.map((link) => (
           <Link key={link.href} href={link.href}>
             {link.label}

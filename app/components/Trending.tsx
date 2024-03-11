@@ -3,7 +3,10 @@ import TrendingDrinks from "./ui/TrendingDrinks";
 
 export default function Trending() {
   return (
-    <section id="food" className="relative flex flex-col justify-center">
+    <section
+      id="food"
+      className="relative mx-1 my-8 flex flex-col justify-center overflow-hidden rounded-lg shadow-lg shadow-black/10 transition-transform hover:scale-[1.005]"
+    >
       <TrendingSushi />
       <TrendingDrinks />
       <Discover />
@@ -13,7 +16,7 @@ export default function Trending() {
 
 function Discover() {
   return (
-    <article className="absolute left-[calc(50.2%-50px)] z-10 hidden h-[100px] w-[100px] items-center justify-center rounded-lg md:top-[calc(50%-50px)] md:flex tablet:top-[calc(45%-50px)]">
+    <article className="absolute left-[calc(50.2%-50px)] z-10 hidden h-[100px] w-[100px] items-center justify-center rounded-lg md:top-[calc(50%-50px)] md:flex">
       <p className="z-10 font-playfair text-xl font-medium text-white">
         DISCOVER
       </p>

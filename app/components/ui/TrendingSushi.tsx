@@ -1,14 +1,12 @@
 import Image from "next/image";
 
 import { TRENDING_SUSHI } from "../../constants/TRENDING_FOODS";
-
-import check from "/public/assets/check.svg";
-import suhshi5 from "/public/assets/sushi-5.png";
+import { check, suhshi5 } from "@/app/constants/IMAGES_LIST";
 
 export default function TrendingSushi() {
   return (
     <article className="flex flex-col md:flex-row">
-      <section className="flex w-full flex-col items-center justify-center gap-5 pb-12 pt-8 md:w-1/2 md:items-start md:pl-6">
+      <section className="flex h-1/2 w-full flex-col items-center justify-center gap-5 pb-12 pt-8 md:w-1/2 md:items-start md:pl-6">
         <p className="pl-[40px] pt-3 text-lg text-zinc-600">
           What&apos;s Trending | トレンド
         </p>
@@ -33,15 +31,15 @@ export default function TrendingSushi() {
         </ul>
       </section>
 
-      <article className="group w-[100%] overflow-hidden border-b border-l border-black/15 bg-white py-10 md:w-1/2">
+      <article className="group h-1/2 w-[100%] overflow-hidden border-b border-l border-black/15 bg-white py-10 md:w-1/2">
         <div
           style={{ backgroundImage: "url('/assets/japanese_sushi.png')" }}
-          className="flex h-full items-center justify-center bg-contain bg-right-top"
+          className="flex h-[250px] items-center justify-center bg-contain bg-right-top"
         >
           <Image
             src={suhshi5}
             alt="sushi-5"
-            style={{ maxWidth: "40%" }}
+            style={{ width: "30%" }}
             className="transition-transform duration-1000 group-hover:scale-110"
           />
         </div>

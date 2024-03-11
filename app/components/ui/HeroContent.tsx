@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import User from "/public/assets/user.png";
+import { user } from "@/app/constants/IMAGES_LIST";
 import { FaPlay } from "react-icons/fa";
 
 export default function HeroContent() {
@@ -55,7 +55,7 @@ function Testimonial() {
 
       <section className="flex w-[68%] items-center gap-2 text-sm">
         <Image
-          src={User}
+          src={user}
           alt="user"
           style={{ width: "60px", height: "60px" }}
         />

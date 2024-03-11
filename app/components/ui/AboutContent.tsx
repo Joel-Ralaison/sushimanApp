@@ -19,5 +19,5 @@ export default function AboutContent() {
 }
 
 // TODO: Title h3
-// TODO: p > about us
+// TODO: p > about us (reusable)
 // TODO: p > We will continue...
