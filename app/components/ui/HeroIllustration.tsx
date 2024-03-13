@@ -4,7 +4,7 @@ import AsianDecoration from "./Reusables/AsianDecoration";
 
 export default function HeroIllustration() {
   return (
-    <article className="relative z-[5] flex h-[calc(100svh-55px)] w-full flex-col bg-emerald-400 md:w-[44.5%]">
+    <article className="relative z-[5] flex h-[calc(100svh-55px)] w-full flex-col md:w-[44.5%]">
       <Image
         src={sushiHero}
         alt="sushi"
