@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { MENU_LINKS } from "../../constants/MENU_LINKS";
+import { MENU_LINKS } from "../../../constants/MENU_LINKS";
 
 export default function Menu() {
   return (

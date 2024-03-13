@@ -1,7 +1,7 @@
 import Link from "next/link";
 import AsianDecoration from "./Reusables/AsianDecoration";
 
-import { MENU_LINKS } from "@/app/constants/MENU_LINKS";
+import { MENU_LINKS } from "@/constants/MENU_LINKS";
 import { BiMenuAltRight } from "react-icons/bi";
 
 export default function MobileMenu() {

@@ -1,5 +1,6 @@
 import Image from "next/image";
-import { learnMore, sushi2, sushi3 } from "@/app/constants/IMAGES_LIST";
+import { learnMore, sushi2, sushi3 } from "@/constants/IMAGES_LIST";
+import Button from "./Reusables/Button";
 
 export default function AboutIllustration() {
   return (
@@ -11,15 +12,18 @@ export default function AboutIllustration() {
         <Image src={sushi3} alt="sushi image 2" width={300} />
       </div>
 
-      <button
-        type="button"
-        className="group absolute right-0 top-1/2 flex min-h-16 items-center gap-2 rounded-l-3xl bg-secondary px-8 py-3 text-lg font-medium text-white transition-all hover:origin-right hover:bg-primary hover:shadow-md hover:shadow-black/15"
+      <Button
+        impact="cta"
+        shape="noRoundedRight"
+        size="normal"
+        hoverShape="normal"
+        className="group absolute right-0 top-1/2"
       >
         <span>Learn more</span>
-        <span className="relative bottom-0 left-0 transition-all group-hover:bottom-[3px] group-hover:left-[3px]">
-          <Image src={learnMore} alt="learn more" width={20} />
+        <span className="relative bottom-0 left-0 transition-all group-hover:bottom-[2px] group-hover:left-[2px]">
+          <Image src={learnMore} alt="learn more" width={16} />
         </span>
-      </button>
+      </Button>
 
       <div
         style={{ backgroundImage: "url('/assets/about_bg2.png')" }}

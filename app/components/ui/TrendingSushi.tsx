@@ -1,7 +1,7 @@
 import Image from "next/image";
 
-import { TRENDING_SUSHI } from "../../constants/TRENDING_FOODS";
-import { check, suhshi5 } from "@/app/constants/IMAGES_LIST";
+import { TRENDING_SUSHI } from "../../../constants/TRENDING_FOODS";
+import { check, suhshi5 } from "@/constants/IMAGES_LIST";
 
 export default function TrendingSushi() {
   return (

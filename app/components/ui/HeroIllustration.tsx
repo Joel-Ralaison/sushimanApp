@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { sushiHero } from "@/app/constants/IMAGES_LIST";
+import { sushiHero } from "@/constants/IMAGES_LIST";
 import AsianDecoration from "./Reusables/AsianDecoration";
 
 export default function HeroIllustration() {
@@ -9,7 +9,6 @@ export default function HeroIllustration() {
         src={sushiHero}
         alt="sushi"
         className="w-[100%)] h-[90%] object-contain"
-        priority
       />
 
       <AsianDecoration />

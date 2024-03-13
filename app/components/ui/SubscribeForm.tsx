@@ -1,3 +1,4 @@
+import Button from "./Reusables/Button";
 export default function SubscribeForm() {
   return (
     <form
@@ -11,12 +12,15 @@ export default function SubscribeForm() {
         className="w-[100%] border-b border-black/25 bg-transparent pt-1 text-lg text-white outline-none placeholder:font-extralight placeholder:text-zinc-100"
       />
 
-      <button
+      <Button
+        impact="primary"
+        size="small"
+        shape="normal"
+        hoverShape="normal"
         type="submit"
-        className="rounded-lg bg-secondary p-3 text-white transition-colors duration-200 ease-in-out hover:bg-white hover:text-secondary hover:shadow-md hover:shadow-black/15"
       >
         Subscribe
-      </button>
+      </Button>
     </form>
   );
 }

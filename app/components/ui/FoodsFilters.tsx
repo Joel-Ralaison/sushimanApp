@@ -1,21 +1,21 @@
 import Image from "next/image";
-import { FILTERS_LIST } from "@/app/constants/FOODS_FILTER_LIST";
+import { FILTERS_LIST } from "@/constants/FOODS_FILTER_LIST";
+import Button from "./Reusables/Button";
 
 export default function FoodsFilters() {
   return (
     <section className="mt-12 flex max-w-[100%] scroll-m-12 gap-6 overflow-x-auto px-2 pb-4">
-      <button
-        type="button"
-        className="rounded-lg border border-white/20 bg-white/90 px-7 py-3 font-light leading-6 text-secondary"
-      >
+      <Button impact="list" shape="normal" size="list" hoverShape="list">
         All
-      </button>
+      </Button>
 
       {FILTERS_LIST.map((filter, index) => (
-        <button
+        <Button
           key={index + 1}
-          type="button"
-          className="flex items-center gap-3 rounded-lg border border-white/20 bg-white/5 px-7 py-3 font-light leading-6 text-white transition-colors hover:bg-white/90 hover:text-secondary"
+          impact="list"
+          shape="normal"
+          size="list"
+          hoverShape="list"
         >
           <span>
             <Image
@@ -24,17 +24,13 @@ export default function FoodsFilters() {
               style={{ width: "36px" }}
             />
           </span>
-
           <span>{filter.label}</span>
-        </button>
+        </Button>
       ))}
 
-      <button
-        type="button"
-        className="rounded-lg border border-white/20 bg-white/5 px-7 py-3 font-light leading-6 text-white"
-      >
+      <Button impact="list" shape="normal" size="list" hoverShape="list">
         Others
-      </button>
+      </Button>
     </section>
   );
 }

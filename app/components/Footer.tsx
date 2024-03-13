@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { MEDIA_LINKS } from "../constants/SOCIAL_MEDIA_LISTS";
+import { MEDIA_LINKS } from "../../constants/SOCIAL_MEDIA_LISTS";
 
 export default function Footer() {
   return (

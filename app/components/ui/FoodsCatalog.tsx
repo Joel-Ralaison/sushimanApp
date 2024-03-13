@@ -1,6 +1,6 @@
 import Image from "next/image";
-import { FOOD_CARDS } from "@/app/constants/FOODS_FILTER_LIST";
-import { star } from "@/app/constants/IMAGES_LIST";
+import { FOOD_CARDS } from "@/constants/FOODS_FILTER_LIST";
+import { star } from "@/constants/IMAGES_LIST";
 
 export default function FoodsCatalog() {
   return (

@@ -1,6 +1,6 @@
 import Image from "next/image";
-import { TRENDING_DRINKS } from "@/app/constants/TRENDING_FOODS";
-import { check, suhshi4 } from "@/app/constants/IMAGES_LIST";
+import { TRENDING_DRINKS } from "@/constants/TRENDING_FOODS";
+import { check, suhshi4 } from "@/constants/IMAGES_LIST";
 
 export default function TrendingDrinks() {
   return (
