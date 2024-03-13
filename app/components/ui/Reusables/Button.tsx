@@ -13,19 +13,20 @@ type buttonProps = {
 } & React.ComponentProps<"button">;
 
 const twBtnBase =
-  "flex gap-2 items-center justify-center transition-all duration-200";
+  "flex items-center justify-center transition-all duration-200";
 
 const twBtnImpact: Record<buttonProps["impact"], string> = {
   cta: "bg-secondary text-white hover:bg-primary",
   primary: "bg-secondary text-white hover:bg-creamson hover:text-secondary",
-  secondary: "bg-transparent text-black border border-secondary hover:bg-white",
-  list: "bg-white/5 border border-white/20 text-white hover:bg-white/90 hover:text-secondary",
+  secondary:
+    "bg-transparent text-black border border-secondary hover:bg-white gap-3",
+  list: "bg-white/5 border border-white/20 text-white hover:bg-white/90 hover:text-secondary gap-2",
 };
 
 const twBtnShape: Record<buttonProps["shape"], string> = {
   cta: "rounded-2xl",
   normal: "rounded-lg",
-  noRoundedRight: "rounded-l-3xl",
+  noRoundedRight: "rounded-l-3xl gap-2",
 };
 
 const twBtnHover: Record<buttonProps["hoverShape"], string> = {
@@ -35,7 +36,7 @@ const twBtnHover: Record<buttonProps["hoverShape"], string> = {
 };
 
 const twBtnSize: Record<buttonProps["size"], string> = {
-  cta: "h-[67px] w-[calc(100%)] min-w-[150px] p-5 text-[18px] font-medium md:w-[45%]",
+  cta: "h-[67px] w-[80%] min-w-[150px] p-5 text-[18px] font-medium md:w-[50%]",
   normal: "px-10 py-4 text-lg font-medium leading-[23px]",
   small: "p-3",
   list: "px-7 py-3 font-light leading-6",

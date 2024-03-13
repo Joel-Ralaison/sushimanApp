@@ -3,27 +3,26 @@ import Image from "next/image";
 import { user } from "@/constants/IMAGES_LIST";
 import { FaPlay } from "react-icons/fa";
 import Button from "./Reusables/Button";
+import TitleH2 from "./Reusables/TitleH2";
 
 export default function HeroContent() {
   return (
     <article className="flex w-full flex-col items-center justify-start pt-10 text-center md:h-[calc(100svh-55px)] md:w-[55.5%] md:justify-between md:pt-[4%] md:text-start">
       <article className="flex flex-col gap-4 md:pl-10">
-        <h2 className="font-playfair text-6xl font-semibold text-zinc-700 md:text-5xl md:leading-[3.5rem] tablet:text-6xl tablet:leading-[1.2]">
-          Feel the taste of Japanese food
-        </h2>
+        <TitleH2 type="main"> Feel the taste of Japanese food</TitleH2>
 
         <p className="ml-8 text-[18px] font-normal text-secondary md:mb-4">
           Tasty Japanese food, anywhere anytime
         </p>
 
-        <div className="mb-8 flex flex-col justify-center gap-3 px-8 md:flex-row ">
+        <div className="mb-8 flex flex-col items-center justify-center gap-3 px-8 md:flex-row">
           <Button impact="cta" shape="cta" size="cta" hoverShape="grow">
             Order now
           </Button>
 
           <Button impact="secondary" shape="cta" size="cta" hoverShape="grow">
-            <span>
-              <FaPlay className="h-[67px]" />
+            <span className="md:hidden tablet:block">
+              <FaPlay className="h-[65px]" />
             </span>
             <span>How to order</span>
           </Button>

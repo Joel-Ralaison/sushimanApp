@@ -4,8 +4,7 @@ export default function Subscribe() {
   return (
     <section
       id="services"
-      style={{ backgroundImage: "url('assets/subscribe_bg.png')" }}
-      className="flex w-full flex-col items-center gap-8 bg-primary bg-contain bg-center bg-no-repeat py-16"
+      className="flex w-full flex-col items-center gap-8 bg-primary bg-[url('/assets/subscribe_bg.png')] bg-contain bg-center bg-no-repeat py-16"
     >
       <SubscribeTitle />
       <SubscribeForm />

@@ -1,14 +1,30 @@
-import TrendingSushi from "./ui/TrendingSushi";
-import TrendingDrinks from "./ui/TrendingDrinks";
+import TrendingContent from "./ui/Reusables/TrendingContent";
+
+import { TRENDING_DRINKS, TRENDING_SUSHI } from "@/constants/TRENDING_FOODS";
+import { sushi4, sushi5 } from "@/constants/IMAGES_LIST";
 
 export default function Trending() {
   return (
     <section
       id="food"
-      className="relative mx-1 my-8 flex flex-col justify-center overflow-hidden rounded-lg shadow-lg shadow-black/10 transition-transform hover:scale-[1.005]"
+      className="relative my-8 flex flex-col justify-center overflow-hidden rounded-lg shadow-lg shadow-black/10"
     >
-      <TrendingSushi />
-      <TrendingDrinks />
+      <TrendingContent
+        title="Japanese Sushi"
+        description="Feel the taste of the most delicious Sushi here."
+        image={sushi5}
+        alt="Trending sushi"
+        products={TRENDING_SUSHI}
+      />
+
+      <TrendingContent
+        title="Japanese Drinks"
+        description="Feel the taste of most tasty Japanese drinks here."
+        image={sushi4}
+        alt="Trending drinks"
+        products={TRENDING_DRINKS}
+      />
+
       <Discover />
     </section>
   );
