@@ -1,6 +1,6 @@
 import Link from "next/link";
-import AsianDecoration from "./Reusables/AsianDecoration";
 
+import AsianDecoration from "./Reusables/AsianDecoration";
 import { MENU_LINKS } from "@/constants/MENU_LINKS";
 import { BiMenuAltRight } from "react-icons/bi";
 

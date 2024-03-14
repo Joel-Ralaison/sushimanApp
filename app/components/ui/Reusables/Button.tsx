@@ -3,10 +3,10 @@
 import classNames from "classnames";
 
 type buttonProps = {
-  impact: "cta" | "primary" | "secondary" | "list"; // color
-  shape: "cta" | "normal" | "noRoundedRight"; // border radius
-  hoverShape: "grow" | "normal" | "list"; // scale, shadow
-  size: "cta" | "normal" | "small" | "list"; // pading
+  impact: "cta" | "primary" | "secondary" | "list";
+  shape: "cta" | "normal" | "noRoundedRight";
+  hoverShape: "grow" | "normal" | "list";
+  size: "cta" | "normal" | "small" | "list";
 
   type?: "button" | "reset" | "submit";
   children: React.ReactNode;

@@ -7,7 +7,7 @@ export default function HeaderLogo() {
         <Link href="/">SushiMan</Link>
       </h1>
 
-      <div className="absolute inset-0 z-[-1] w-full bg-primary"></div>
+      <div className="absolute inset-0 z-[-1] w-full bg-primary" />
     </article>
   );
 }

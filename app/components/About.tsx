@@ -5,7 +5,7 @@ export default function About() {
   return (
     <section
       id="about"
-      className="flex min-h-[100vh] flex-col-reverse flex-wrap md:flex-row md:flex-nowrap"
+      className="flex min-h-[calc(100svh-55px)] flex-col-reverse md:flex-row"
     >
       <AboutIllustration />
       <AboutContent />

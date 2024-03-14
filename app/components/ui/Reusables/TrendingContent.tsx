@@ -1,6 +1,7 @@
 import Image, { StaticImageData } from "next/image";
 import TitleH2 from "./TitleH2";
 import { check } from "@/constants/IMAGES_LIST";
+import { MotionArticle, MotionSection } from "./Motions";
 
 type TrendingProps = {
   title: string;
@@ -8,6 +9,24 @@ type TrendingProps = {
   products: string[];
   image: StaticImageData;
   alt: string;
+};
+
+const fadeIn = {
+  start: { opacity: 0, y: "10%" },
+  stop: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.25, yoyo: 1 },
+  },
+};
+
+const fadeDown = {
+  start: { opacity: 0, y: "-10%" },
+  stop: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.25, yoyo: 1 },
+  },
 };
 
 export default function TrendingContent({
@@ -18,8 +37,13 @@ export default function TrendingContent({
   products,
 }: TrendingProps) {
   return (
-    <article className="group flex flex-col odd:md:flex-row even:md:flex-row-reverse">
-      <section className="flex h-1/2 w-full flex-col items-center justify-center gap-5 pb-12 pt-8 md:w-1/2 md:items-start md:pl-6">
+    <article className="flex flex-col odd:md:flex-row even:md:flex-row-reverse">
+      <MotionSection
+        variants={fadeIn}
+        initial="start"
+        whileInView={"stop"}
+        className="flex h-1/2 w-full flex-col items-center justify-center gap-5 pb-12 pt-8 md:w-1/2 md:items-start md:pl-6"
+      >
         <p className="pl-[40px] pt-3 text-lg text-zinc-600">
           What&apos;s Trending | トレンド
         </p>
@@ -38,18 +62,23 @@ export default function TrendingContent({
             </li>
           ))}
         </ul>
-      </section>
+      </MotionSection>
 
-      <article className="h-1/2 w-[100%] overflow-hidden bg-white py-10 md:w-1/2">
+      <MotionArticle
+        variants={fadeDown}
+        initial="start"
+        whileInView={"stop"}
+        className="h-1/2 w-[100%] overflow-hidden bg-white py-10 md:w-1/2"
+      >
         <div className="flex h-[250px] items-center justify-center bg-[url('/assets/japanese_sushi.png')] bg-contain bg-right-top">
           <Image
             src={image}
             alt={alt}
             style={{ width: "30%" }}
-            className="transition-transform duration-[5s] group-hover:scale-110"
+            className="transition-transform duration-[5s]"
           />
         </div>
-      </article>
+      </MotionArticle>
     </article>
   );
 }

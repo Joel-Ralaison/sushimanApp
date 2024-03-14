@@ -1,4 +1,14 @@
+import { MotionArticle } from "./ui/Reusables/Motions";
 import SubscribeForm from "./ui/SubscribeForm";
+
+const fadeIn = {
+  start: { opacity: 0, y: "10%" },
+  stop: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.25 },
+  },
+};
 
 export default function Subscribe() {
   return (
@@ -14,7 +24,7 @@ export default function Subscribe() {
 
 function SubscribeTitle() {
   return (
-    <>
+    <MotionArticle variants={fadeIn} initial="start" whileInView={"stop"}>
       <h2 className="text-center font-playfair text-4xl font-semibold leading-tight text-white md:text-5xl">
         Get <span>Offers</span> straight
         <br />
@@ -23,7 +33,7 @@ function SubscribeTitle() {
       <p className="font-extralight tracking-widest text-white/90">
         Sign-up for the SushiMan Newsletter
       </p>
-    </>
+    </MotionArticle>
   );
 }
 

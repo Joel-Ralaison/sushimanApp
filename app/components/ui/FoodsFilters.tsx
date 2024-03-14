@@ -1,10 +1,11 @@
 import Image from "next/image";
+
 import { FILTERS_LIST } from "@/constants/FOODS_FILTER_LIST";
 import Button from "./Reusables/Button";
 
 export default function FoodsFilters() {
   return (
-    <section className="mt-12 flex max-w-[100%] scroll-m-12 gap-6 overflow-x-auto px-2 pb-4">
+    <section className="flex max-w-[100%] gap-6 overflow-x-auto px-2 pb-4">
       <Button impact="list" shape="normal" size="list" hoverShape="list">
         All
       </Button>
