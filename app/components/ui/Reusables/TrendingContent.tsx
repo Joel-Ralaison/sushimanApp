@@ -1,7 +1,10 @@
 import Image, { StaticImageData } from "next/image";
+
 import TitleH2 from "./TitleH2";
 import { check } from "@/constants/IMAGES_LIST";
+
 import { MotionArticle, MotionSection } from "./Motions";
+import { fade } from "@/utils/motionVariants";
 
 type TrendingProps = {
   title: string;
@@ -9,24 +12,6 @@ type TrendingProps = {
   products: string[];
   image: StaticImageData;
   alt: string;
-};
-
-const fadeIn = {
-  start: { opacity: 0, y: "10%" },
-  stop: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.25, yoyo: 1 },
-  },
-};
-
-const fadeDown = {
-  start: { opacity: 0, y: "-10%" },
-  stop: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.25, yoyo: 1 },
-  },
 };
 
 export default function TrendingContent({
@@ -39,7 +24,7 @@ export default function TrendingContent({
   return (
     <article className="flex flex-col odd:md:flex-row even:md:flex-row-reverse">
       <MotionSection
-        variants={fadeIn}
+        variants={fade("top", "", 0.25)}
         initial="start"
         whileInView={"stop"}
         className="flex h-1/2 w-full flex-col items-center justify-center gap-5 pb-12 pt-8 md:w-1/2 md:items-start md:pl-6"
@@ -65,7 +50,7 @@ export default function TrendingContent({
       </MotionSection>
 
       <MotionArticle
-        variants={fadeDown}
+        variants={fade("bottom", "", 0.25)}
         initial="start"
         whileInView={"stop"}
         className="h-1/2 w-[100%] overflow-hidden bg-white py-10 md:w-1/2"

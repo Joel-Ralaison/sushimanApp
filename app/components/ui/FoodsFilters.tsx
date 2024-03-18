@@ -1,23 +1,15 @@
 import Image from "next/image";
 
 import { FILTERS_LIST } from "@/constants/FOODS_FILTER_LIST";
-import Button from "./Reusables/Button";
+import FoodsFilterButton from "./Reusables/FoodsFilterButton";
 
 export default function FoodsFilters() {
   return (
     <section className="flex max-w-[100%] gap-6 overflow-x-auto px-2 pb-4">
-      <Button impact="list" shape="normal" size="list" hoverShape="list">
-        All
-      </Button>
+      <FoodsFilterButton>All</FoodsFilterButton>
 
       {FILTERS_LIST.map((filter, index) => (
-        <Button
-          key={index + 1}
-          impact="list"
-          shape="normal"
-          size="list"
-          hoverShape="list"
-        >
+        <FoodsFilterButton key={index}>
           <span>
             <Image
               src={filter.image}
@@ -26,14 +18,10 @@ export default function FoodsFilters() {
             />
           </span>
           <span>{filter.label}</span>
-        </Button>
+        </FoodsFilterButton>
       ))}
 
-      <Button impact="list" shape="normal" size="list" hoverShape="list">
-        Others
-      </Button>
+      <FoodsFilterButton>Others</FoodsFilterButton>
     </section>
   );
 }
-
-// TODO: BUTTON Client Components to filter tab

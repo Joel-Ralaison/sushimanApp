@@ -12,6 +12,11 @@
 @tailwind components;
 @tailwind utilities;
 
+html,
+body {
+  scroll-behavior: smooth;
+}
+
 body {
   @apply mx-auto max-w-screen-xl scroll-smooth bg-creamson font-jakarta text-zinc-900;
 }

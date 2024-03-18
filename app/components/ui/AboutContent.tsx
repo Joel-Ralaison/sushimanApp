@@ -1,22 +1,6 @@
-import { MotionArticle, MotionDiv, MotionP } from "./Reusables/Motions";
+import { fade } from "@/utils/motionVariants";
+import { MotionDiv, MotionP } from "./Reusables/Motions";
 import TitleH2 from "./Reusables/TitleH2";
-
-const fadeTop = {
-  start: { opacity: 0, y: "20%" },
-  stop: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.25, yoyo: 1 },
-  },
-};
-
-const fade = {
-  start: { opacity: 0 },
-  stop: {
-    opacity: 1,
-    transition: { duration: 0.5, delay: 0.25, yoyo: 1 },
-  },
-};
 
 export default function AboutContent() {
   return (
@@ -26,14 +10,18 @@ export default function AboutContent() {
         <span>私たちに関しては</span>
       </div>
 
-      <MotionDiv variants={fadeTop} initial="start" whileInView={"stop"}>
+      <MotionDiv
+        variants={fade("top", "", 0.25)}
+        initial="start"
+        whileInView={"stop"}
+      >
         <TitleH2 type="main">
           Our mission is to bring true Japanese flavours to you.
         </TitleH2>
       </MotionDiv>
 
       <MotionP
-        variants={fade}
+        variants={fade("", "", 0.25)}
         initial="start"
         whileInView={"stop"}
         className="text-lg font-thin leading-snug text-secondary"
@@ -44,7 +32,3 @@ export default function AboutContent() {
     </article>
   );
 }
-
-// TODO: Title h3
-// TODO: p > about us (reusable)
-// TODO: p > We will continue...

@@ -1,11 +1,10 @@
 import Image from "next/image";
 
-import { MotionDiv, MotionP, MotionArticle } from "./Reusables/Motions";
 import TitleH2 from "./Reusables/TitleH2";
-import Button from "./Reusables/Button";
-
 import { user } from "@/constants/IMAGES_LIST";
-import { FaPlay } from "react-icons/fa";
+import { MotionDiv, MotionArticle } from "./Reusables/Motions";
+import { fade } from "@/utils/motionVariants";
+import CallToAction from "./Reusables/CallToAction";
 
 export default function HeroContent() {
   return (
@@ -16,80 +15,32 @@ export default function HeroContent() {
   );
 }
 
-const HeadingVariants = {
-  start: { opacity: 0, y: "10%" },
-  stop: {
-    opacity: 1,
-    y: 0,
-    transition: { delay: 0.25, duration: 0.75 },
-    when: "beforeChildren",
-  },
-};
-
-const TextVariants = {
-  start: { opacity: 0, y: "-10%" },
-  stop: {
-    opacity: 1,
-    y: 0,
-    transition: { delay: 0.5, duration: 0.5 },
-  },
-};
-
-const ButtonContainerVariants = {
-  start: { opacity: 0, y: "-15%" },
-  stop: {
-    opacity: 1,
-    y: 0,
-    transition: { delay: 0.25, duration: 0.75 },
-  },
-};
-
 function CTA() {
   return (
     <article className="flex flex-col gap-4 md:pl-10">
-      <MotionDiv variants={HeadingVariants} initial="start" animate="stop">
-        <TitleH2 type="main"> Feel the taste of Japanese food</TitleH2>
-
-        <MotionP
-          variants={TextVariants}
-          className="ml-8 mt-6 text-[18px] font-normal text-secondary md:mb-4"
-        >
-          Tasty Japanese food, anywhere anytime
-        </MotionP>
-      </MotionDiv>
-
       <MotionDiv
-        variants={ButtonContainerVariants}
+        variants={fade("bottom", "", 0.5, "beforeChildren")}
         initial="start"
         animate="stop"
-        className="mb-8 flex flex-col items-center justify-center gap-3 px-8 md:flex-row"
       >
-        <Button impact="cta" shape="cta" size="cta" hoverShape="grow">
-          Order now
-        </Button>
+        <TitleH2 type="main"> Feel the taste of Japanese food</TitleH2>
 
-        <Button impact="secondary" shape="cta" size="cta" hoverShape="grow">
-          <span className="md:hidden tablet:block">
-            <FaPlay className="h-[65px]" />
-          </span>
-          <span>How to order</span>
-        </Button>
+        <p className="ml-8 mt-6 text-[18px] font-normal text-secondary md:mb-4">
+          Tasty Japanese food, anywhere anytime
+        </p>
       </MotionDiv>
+
+      <CallToAction />
     </article>
   );
 }
 
-const TestimonialVariants = {
-  start: { y: "100%" },
-  stop: { y: 0, transition: { delay: 0.25, type: "tween", duration: 0.75 } },
-};
-
 function Testimonial() {
   return (
     <MotionArticle
-      variants={TestimonialVariants}
-      initial="start"
-      animate="stop"
+      initial={{ y: "100%" }}
+      animate={{ y: 0 }}
+      transition={{ type: "tween", duration: 0.5 }}
       className="flex w-full flex-col items-center gap-8 bg-white px-4 py-2 md:w-[100%] md:flex-row md:justify-center md:gap-5 "
     >
       <section className="w-[30%] gap-3 text-center md:border-r md:border-zinc-200">
@@ -116,6 +67,3 @@ function Testimonial() {
     </MotionArticle>
   );
 }
-
-// TODO : Button client components
-// TODO : Titles global style

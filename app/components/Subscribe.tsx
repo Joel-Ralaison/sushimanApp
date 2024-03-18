@@ -1,14 +1,7 @@
-import { MotionArticle } from "./ui/Reusables/Motions";
 import SubscribeForm from "./ui/SubscribeForm";
 
-const fadeIn = {
-  start: { opacity: 0, y: "10%" },
-  stop: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.25 },
-  },
-};
+import { fade } from "@/utils/motionVariants";
+import { MotionArticle } from "./ui/Reusables/Motions";
 
 export default function Subscribe() {
   return (
@@ -24,7 +17,11 @@ export default function Subscribe() {
 
 function SubscribeTitle() {
   return (
-    <MotionArticle variants={fadeIn} initial="start" whileInView={"stop"}>
+    <MotionArticle
+      variants={fade("top", "", 0.25)}
+      initial="start"
+      whileInView={"stop"}
+    >
       <h2 className="text-center font-playfair text-4xl font-semibold leading-tight text-white md:text-5xl">
         Get <span>Offers</span> straight
         <br />
@@ -36,5 +33,3 @@ function SubscribeTitle() {
     </MotionArticle>
   );
 }
-
-// TODO: Remove inline style of div

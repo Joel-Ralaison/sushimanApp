@@ -1,5 +1,6 @@
+"use client";
+
 import Image from "next/image";
-import Link from "next/link";
 import { MEDIA_LINKS } from "../../constants/SOCIAL_MEDIA_LISTS";
 
 export default function Footer() {
@@ -13,12 +14,12 @@ export default function Footer() {
 
 function FooterLogo() {
   return (
-    <h2 className="font-playfair text-3xl font-semibold">
-      <Link href="/">
-        <span className="text-white">Sushi</span>
-        <span className="text-black">Man</span>
-      </Link>
-    </h2>
+    <div className="items-center gap-4 font-playfair font-semibold">
+      <p className="font-regular font-jakarta text-sm tablet:text-lg">
+        A front-end project based on{" "}
+        <span className="text-white">JS Mastery</span> course
+      </p>
+    </div>
   );
 }
 

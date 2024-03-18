@@ -1,4 +1,7 @@
+"use client";
+
 import Button from "./Reusables/Button";
+
 export default function SubscribeForm() {
   return (
     <form
@@ -6,6 +9,7 @@ export default function SubscribeForm() {
       className="flex w-[75%] gap-4 rounded-lg border border-transparent bg-white/10 py-1 pl-5 pr-2 focus-within:border-white/30 md:w-[50%]"
     >
       <input
+        name="mail"
         type="email"
         aria-label="email"
         placeholder="Enter your email"
@@ -24,5 +28,3 @@ export default function SubscribeForm() {
     </form>
   );
 }
-
-// TODO: Use Client

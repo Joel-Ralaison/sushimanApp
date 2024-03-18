@@ -4,21 +4,12 @@ import { MotionSection } from "./ui/Reusables/Motions";
 import { sushi4, sushi5 } from "@/constants/IMAGES_LIST";
 import { TRENDING_DRINKS, TRENDING_SUSHI } from "@/constants/TRENDING_FOODS";
 
-const growIn = {
-  start: { opacity: 0.8, scale: 0.98 },
-  stop: {
-    opacity: 1,
-    scale: 1,
-    transition: { duration: 0.25, originX: "50%", originY: "50%" },
-  },
-};
-
 export default function Trending() {
   return (
     <MotionSection
-      variants={growIn}
-      initial="start"
-      whileInView={"stop"}
+      initial={{ opacity: 0.8, scale: 0.98 }}
+      whileInView={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 0.25, originX: "50%", originY: "50%" }}
       id="food"
       className="relative my-8 flex flex-col justify-center overflow-hidden rounded-lg shadow-lg shadow-black/10"
     >

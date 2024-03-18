@@ -1,29 +1,22 @@
 import Image from "next/image";
+
 import { FOOD_CARDS } from "@/constants/FOODS_FILTER_LIST";
 import { star } from "@/constants/IMAGES_LIST";
-import { MotionArticle } from "./Reusables/Motions";
 
-const fadeIn = {
-  start: { opacity: 0, scale: 0.95 },
-  stop: {
-    opacity: 1,
-    scale: 1,
-    transition: { duration: 0.25, type: "tween", ease: "linear" },
-  },
-  hover: { scale: 1.05 },
-};
+import { MotionArticle } from "./Reusables/Motions";
+import { fade } from "@/utils/motionVariants";
 
 export default function FoodsCatalog() {
   return (
-    <section className="flex flex-col flex-wrap items-end justify-center space-x-4 space-y-4 md:mt-4 md:flex-row">
+    <section className="flex flex-col flex-wrap justify-center gap-4 md:mt-4 md:flex-row">
       {FOOD_CARDS.map((food, index) => (
         <MotionArticle
-          variants={fadeIn}
+          variants={fade("top", "", 0.25)}
           initial="start"
           whileInView={"stop"}
-          whileHover={"hover"}
+          whileHover={{ transform: "scale(1.05)" }}
           key={index}
-          className="group flex h-[175px] w-1/4 min-w-[70vw] flex-col items-center justify-end gap-2 rounded-lg border border-white/20 bg-white/10 py-3 text-white transition-all hover:bg-white/70 hover:text-secondary md:min-w-[200px]"
+          className="group flex h-[175px] w-1/4 min-w-[70vw] flex-col items-center justify-end gap-2 rounded-lg border border-white/20 bg-white/10 py-3 text-white transition-all hover:scale-105 hover:bg-white/70 hover:text-secondary md:min-w-[200px]"
         >
           <span className="mb-3">
             <Image src={food.image} alt={food.name} height={65} />
@@ -46,5 +39,3 @@ export default function FoodsCatalog() {
     </section>
   );
 }
-
-// TODO: FOOD COMMAND

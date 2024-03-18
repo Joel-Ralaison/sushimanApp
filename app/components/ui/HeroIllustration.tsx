@@ -1,25 +1,17 @@
 import Image from "next/image";
-import { MotionDiv } from "./Reusables/Motions";
 
 import { sushiHero } from "@/constants/IMAGES_LIST";
 import AsianDecoration from "./Reusables/AsianDecoration";
 
-const sushiImageVariants = {
-  start: { opacity: 0, x: "-10%", y: "-10%" },
-  stop: {
-    opacity: 1,
-    x: 0,
-    y: 0,
-    transition: { delay: 0.25, type: "tween", duration: 0.75 },
-  },
-};
+import { MotionDiv } from "./Reusables/Motions";
+import { fade } from "@/utils/motionVariants";
 
 export default function HeroIllustration() {
   return (
     <article className="relative z-[5] flex h-[calc(100svh-55px)] w-full flex-col md:w-[44.5%]">
       <MotionDiv
         className="h-[90%] w-full"
-        variants={sushiImageVariants}
+        variants={fade("top", "left", 0.5)}
         initial="start"
         animate="stop"
       >
