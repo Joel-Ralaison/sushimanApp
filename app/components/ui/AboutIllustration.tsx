@@ -8,7 +8,7 @@ import { LearnMoreButton } from "./Reusables/LearnMoreButton";
 
 export default function AboutIllustration() {
   return (
-    <article className="relative flex h-[calc(100svh-55px)] w-full flex-col justify-center bg-white md:w-[45%]">
+    <article className="relative flex h-[calc(100svh-55px)] min-h-[400px] w-full flex-col justify-center bg-white md:w-[45%]">
       <MotionDiv
         variants={fade("", "left", 0.25)}
         initial="start"
@@ -16,7 +16,11 @@ export default function AboutIllustration() {
         style={{ backgroundImage: "url('/assets/about_bg1.png')" }}
         className="flex h-[50%] flex-1 items-center justify-center border-b border-creamson bg-contain bg-center bg-no-repeat py-8"
       >
-        <Image src={sushi3} alt="sushi image 2" width={250} />
+        <Image
+          src={sushi3}
+          alt="sushi image 2"
+          style={{ height: "85%", objectFit: "contain" }}
+        />
       </MotionDiv>
 
       <LearnMoreButton />
@@ -28,7 +32,11 @@ export default function AboutIllustration() {
         style={{ backgroundImage: "url('/assets/about_bg2.png')" }}
         className="flex h-[50%] flex-1 items-center justify-center bg-contain bg-center bg-no-repeat py-8"
       >
-        <Image src={sushi2} alt="sushi image 3" width={250} />
+        <Image
+          src={sushi2}
+          alt="sushi image 3"
+          style={{ height: "70%", objectFit: "contain" }}
+        />
       </MotionDiv>
     </article>
   );

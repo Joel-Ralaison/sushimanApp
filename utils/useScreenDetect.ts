@@ -8,7 +8,6 @@ export function useScreenDetect() {
   });
 
   useEffect(() => {
-    console.log(isMobile ? "Mobile navigation" : "Desktop navigation");
     if (!isMobile) toggleScroll("enabled");
   }, [isMobile]);
 

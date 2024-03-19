@@ -2,7 +2,13 @@ type axeY = "top" | "bottom" | "";
 type axeX = "left" | "right" | "";
 type orchType = "beforeChildren";
 
-function fade(fadeY: axeY, fadeX: axeX, duration: number, timing?: orchType) {
+function fade(
+  fadeY: axeY,
+  fadeX: axeX,
+  duration: number,
+  delay = 0.25,
+  timing?: orchType,
+) {
   let vertical: string;
   let horizontal: string;
 
@@ -40,6 +46,7 @@ function fade(fadeY: axeY, fadeX: axeX, duration: number, timing?: orchType) {
         duration: duration,
         type: "tween",
         when: timing,
+        delay: delay,
       },
     },
   };

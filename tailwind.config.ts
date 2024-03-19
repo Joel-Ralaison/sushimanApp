@@ -9,6 +9,7 @@ const config: Config = {
   theme: {
     extend: {
       screens: {
+        mini: "360px",
         tablet: "1095px",
       },
       backgroundColor: {

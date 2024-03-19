@@ -4,7 +4,7 @@ import TitleH2 from "./Reusables/TitleH2";
 
 export default function AboutContent() {
   return (
-    <article className="flex h-[calc(100svh-55px)] flex-col justify-center gap-8 overflow-hidden pl-8 md:w-[56%]">
+    <article className="flex h-[calc(100svh-55px)] min-h-[400px] flex-col justify-center gap-8 overflow-hidden pl-8 md:w-[56%]">
       <div className="flex gap-2 text-lg font-medium tracking-wide text-zinc-500 transition-colors">
         <span>About Us |</span>
         <span>私たちに関しては</span>

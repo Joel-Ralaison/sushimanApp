@@ -11,7 +11,7 @@ export default function ExploreFoodsButton() {
       shape="normal"
       size="normal"
       hoverShape="normal"
-      className="group"
+      className="group mt-10"
     >
       <span>Explore Foods</span>
       <span className="relative left-0 rounded-lg bg-secondary px-2 py-1 transition-all group-hover:left-2">
