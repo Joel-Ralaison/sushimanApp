@@ -8,7 +8,7 @@ export function ScrollToTopButton() {
   return (
     <button
       type="button"
-      className="z-[2] h-full px-5 py-1 font-playfair text-xl font-bold text-white"
+      className="z-[2] h-full px-5 pb-2 pt-1 font-playfair text-xl font-bold text-white"
       onClick={() => {
         menuHide();
         scrollToTop();

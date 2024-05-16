@@ -27,7 +27,7 @@ function SubscribeTitle() {
         <br />
         to your inbox
       </h2>
-      <p className="font-extralight tracking-widest text-white/90">
+      <p className="mt-4 font-extralight tracking-widest text-white/90">
         Sign-up for the SushiMan Newsletter
       </p>
     </MotionArticle>

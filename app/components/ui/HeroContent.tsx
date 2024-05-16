@@ -1,15 +1,12 @@
-import Image from "next/image";
-
 import TitleH2 from "./Reusables/TitleH2";
-import { user } from "@/constants/IMAGES_LIST";
-import { MotionDiv, MotionArticle } from "./Reusables/Motions";
+import { MotionDiv } from "./Reusables/Motions";
 import { fade } from "@/utils/motionVariants";
 import CallToAction from "./Reusables/CallToAction";
 import Testimonial from "./Testimonial";
 
 export default function HeroContent() {
   return (
-    <article className="flex  h-[550px] w-full flex-col items-center justify-start pt-10 text-center md:h-[calc(100svh-55px)] md:w-[55.5%] md:justify-between md:pt-[4%] md:text-start">
+    <article className="flex min-h-[550px] w-full flex-col items-center justify-start pt-10 text-center md:h-[calc(100svh-55px)] md:w-[55.5%] md:justify-between md:pt-[4%] md:text-start">
       <CTA />
       <Testimonial />
     </article>

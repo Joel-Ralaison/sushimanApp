@@ -5,7 +5,7 @@ import FoodsFilterButton from "./Reusables/FoodsFilterButton";
 
 export default function FoodsFilters() {
   return (
-    <section className="flex max-w-[100%] gap-6 overflow-x-auto px-2 pb-4">
+    <section className="custScrollbar flex max-w-[100%] gap-6 overflow-x-auto px-2 pb-4">
       <FoodsFilterButton>All</FoodsFilterButton>
 
       {FILTERS_LIST.map((filter, index) => (

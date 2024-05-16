@@ -35,7 +35,7 @@ export default function TrendingContent({
 
         <TitleH2 type="trending">{title}</TitleH2>
 
-        <p className="font-light text-zinc-700">{description}</p>
+        <p className="w-[75%] font-light text-zinc-700">{description}</p>
 
         <ul className="grid w-[100%] grid-cols-2 gap-y-2 pl-[15%] md:pl-4">
           {products.map((sushi) => (

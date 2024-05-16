@@ -1,6 +1,6 @@
 {
   "name": "suhiman app",
-  "version": "0.2.0",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.3.3",
     "@next/bundle-analyzer": "^14.1.3",
     "@types/react-scroll": "^1.8.10",
     "classnames": "^2.5.1",

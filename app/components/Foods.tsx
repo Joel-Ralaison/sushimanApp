@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 import FoodsFilters from "./ui/FoodsFilters";
 import FoodsCatalog from "./ui/FoodsCatalog";
 

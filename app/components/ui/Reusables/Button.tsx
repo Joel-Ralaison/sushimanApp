@@ -38,7 +38,7 @@ const twBtnHover: Record<buttonProps["hoverShape"], string> = {
 const twBtnSize: Record<buttonProps["size"], string> = {
   cta: "h-[67px] w-[80%] min-w-[150px] p-5 text-[18px] font-medium md:w-[50%]",
   normal: "px-10 py-4 text-lg font-medium leading-[23px]",
-  small: "p-3",
+  small: "p-3 max-md:text-base",
   list: "px-7 py-3 font-light leading-6",
 };
 

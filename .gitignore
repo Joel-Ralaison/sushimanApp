@@ -1,5 +1,5 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
-repo
+
 
 # dependencies
 /node_modules
@@ -7,6 +7,7 @@ repo
 .pnp.js
 .yarn/install-state.gz
 .prettierrc
+repo
 
 # testing
 /coverage
@@ -29,6 +30,7 @@ yarn-error.log*
 
 # local env files
 .env*.local
+.env
 
 # vercel
 .vercel

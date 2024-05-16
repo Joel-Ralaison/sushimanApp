@@ -23,8 +23,8 @@ const config: Config = {
         creamson: "#fff0de",
       },
       fontFamily: {
-        jakarta: "jakarta",
-        playfair: "playfair",
+        playfair: "var(--font-playfair)",
+        jakarta: "var(--font-jakarta)",
       },
     },
   },

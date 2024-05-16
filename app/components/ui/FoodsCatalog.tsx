@@ -5,7 +5,7 @@ import { star } from "@/constants/IMAGES_LIST";
 
 export default function FoodsCatalog() {
   return (
-    <section className="flex h-[225px] max-w-[100%] snap-x snap-mandatory items-center overflow-x-auto">
+    <section className="custScrollbar flex h-[225px] max-w-[100%] snap-x snap-mandatory items-center overflow-x-auto">
       <div className="flex w-fit justify-between gap-6 px-4 pb-4">
         {FOOD_CARDS.map((food, index) => (
           <article

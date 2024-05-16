@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Dispatch, useEffect, useState } from "react";
+import { useEffect } from "react";
 
 import AsianDecoration from "./Reusables/AsianDecoration";
 import { MENU_LINKS } from "@/constants/MENU_LINKS";

@@ -1,24 +1,18 @@
-@font-face {
-  font-family: playfair;
-  src: url("./fonts/PlayfairDisplay.ttf");
-}
-
-@font-face {
-  font-family: jakarta;
-  src: url("./fonts/PlusJakartaSans.ttf");
-}
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-html,
-body {
-  scroll-behavior: smooth;
+html {
+  @apply !scroll-smooth;
 }
 
 body {
-  @apply mx-auto max-w-screen-xl scroll-smooth bg-creamson font-jakarta text-zinc-900;
+  @apply mx-auto max-w-screen-xl scroll-smooth bg-creamson text-zinc-900;
+}
+
+.custScrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #fff0de #b1454a;
 }
 
 @layer utilities {
