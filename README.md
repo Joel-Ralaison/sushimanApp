@@ -6,6 +6,13 @@ This Sushiman site is build with NextJs 14, and for me, the main challenge for t
 
 Thank you for your visit :)
 
+---
+
+## About me
+
 Joël Ralaison
-+261346058002
 Antananarivo - Madagascar
+`hery.ralaison@mail.com`
+`+261346058002`
+
+[<mark>See my portfolio</mark>](https:/joelralaison.vercel.app)
