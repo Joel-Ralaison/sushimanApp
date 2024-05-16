@@ -11,7 +11,7 @@ export default function SubscribeForm() {
 
     const serviceId = process.env.NEXT_PUBLIC_SERVICE_ID!;
     const templateId = process.env.NEXT_PUBLIC_TEMPLATE_ID!;
-    const publickey = process.env.NEXT_PUBLIC_PUBLIC_KEY!;
+    const publickey = process.env.NEXT_PUBLIC_PBK!;
 
     try {
       emailjs
